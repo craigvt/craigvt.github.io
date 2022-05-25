@@ -1,0 +1,432 @@
+
+/* =====================
+    Typography
+=======================*/
+
+/* Roboto */
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Light.ttf) format('truetype');
+    font-weight: 300;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Black.ttf) format('truetype');
+    font-weight: 900;
+    font-display: swap;
+}
+/* Rajdhani */
+@font-face {
+    font-family: 'Rajdhani';
+    src: url(../fonts/Rajdhani-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-display: swap;
+}
+
+$header-font: 'Rajdhani', Helvetica, Verdana, sans-serif;
+$body-font: 'Roboto', Helvetica, Verdana, sans-serif;
+
+$light: 300;
+$regular: 400;
+$bold: 700;
+$black: 900;
+
+$text-color: #ffffff;
+p {
+    font-family: $body-font;
+    font-weight: $regular;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: .5px;
+}
+h1 {
+    font-family: $header-font;
+    font-weight: $black;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: .5px;
+}
+h2 {
+    font-family: $header-font;
+    font-weight: $bold;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: .5px;
+}
+h3 {
+    font-family: $header-font;
+    font-weight: $bold;
+    font-size: 19px;
+    line-height: 27px;
+    letter-spacing: .5px;
+}
+h4 {
+    font-family: $header-font;
+    font-weight: $bold;
+    font-size: 18px;
+    line-height: 26px;
+}
+h5 {
+    font-family: $header-font;
+    font-weight: $bold;
+    font-size: 17px;
+    line-height: 25px;
+}
+h5 {
+    font-family: $header-font;
+    font-weight: $bold;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* =====================
+    Layout
+=======================*/
+
+$content-width: 1140px;
+
+body {
+    background: #000;
+    font-family: $body-font;
+    font-size: 16px;
+    line-height: 24px;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.block {
+    max-width: $content-width;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* =====================
+    Hero Section
+=======================*/
+
+.hero {
+    padding: 120px 0px;
+    background-image: url("../img/sixdays-hero-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid rgba($color: #ffffff, $alpha: .25);
+
+    .content {
+        max-width: 40%;
+        height: 100%;
+        display: grid;
+        justify-content: start;
+        align-content: center;
+        row-gap: 20px;
+
+        h1 {
+            color: $text-color;
+        }
+
+        p {
+            color: $text-color;
+        }
+
+        .form-group {
+            display: grid;
+
+            h3 {
+                color: $text-color;
+            }
+
+            .inputs {
+                display: flex;
+
+                input[type=email] {
+                    width: 240px;
+                    height: 40px;
+                    margin: 0;
+                    border: 0;
+                    padding-left: 20px;
+                    border-radius: 2px 0px 0px 2px;
+                    outline: none;
+                    background-color: #C5C8B0;
+                    font-family: $body-font;
+                    font-size: 16px;
+                    color: #121213;
+                }
+                input[type=button] {
+                    position: relative;
+                    width: 50px;
+                    height: 42px;
+                    margin: 0;
+                    border: 0;
+                    border-radius: 0px 2px 2px 0px;
+                    background: url("../img/button-icon.png");
+                    background-position: center;
+                    background-color: red;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .logos {
+            width: 160px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+/* =====================
+    Gameplay Section
+=======================*/
+
+.gameplay {
+    padding: 80px 0px;
+    background-image: url("../img/sixdays-gameplay-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid rgba($color: #ffffff, $alpha: .25);
+
+    .content {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 40px;
+
+        .image-group {
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 40px;
+
+            .img-1 {
+                display: block;
+                max-width: 100%;
+                content: url("../img/sixdays-gameplay-1.png");
+                border: 10px solid rgba($color: #000, $alpha: .25);
+            }
+            .img-2 {
+                display: block;
+                max-width: 100%;
+                content: url("../img/sixdays-gameplay-2.png");
+                border: 10px solid rgba($color: #000, $alpha: .25);
+            }
+            .img-3 {
+                display: block;
+                max-width: 100%;
+                content: url("../img/sixdays-gameplay-3.png");
+                border: 10px solid rgba($color: #000, $alpha: .25);
+            }
+        }
+
+        .text-group {
+            padding: 0px 40px;
+            text-align: center;
+
+            h2 {
+                font-size: 44px;
+                line-height: 48px;
+                font-weight: $bold;
+                text-align: center;
+            }
+        }
+    }
+}
+
+/* =====================
+    Footer Section
+=======================*/
+
+.footer {
+    padding: 80px 0px;
+    background-image: url("../img/sixdays-footer-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .content {
+        height: 100%;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        row-gap: 20px;
+
+        h2 {
+            font-size: 60px;
+            font-weight: $light;
+            text-transform: uppercase;
+        }
+
+        .logos {
+            margin-right: 25px;
+            display: flex;
+            justify-content: center;
+
+            img {
+                padding: 0px 20px;
+            }
+        }
+
+        p {
+            margin-top: 60px;
+        }
+    }
+
+}
+
+/* =====================
+    Media Queries
+=======================*/
+
+@media (max-width: 1200px) { 
+    /* layout */
+    .block {
+        padding: 0px 40px;
+    }
+    /* hero section */
+    .hero {
+        background-position: center;
+    }
+}
+
+@media (max-width: 768px) { 
+    /* hero section */
+    .hero {
+        padding: 80px 0px;
+        background-image: url("../img/sixdays-hero-bg-MOBILE.png");
+        
+        .content {
+            max-width: 100%;
+            justify-content: center;
+            justify-items: center;
+            text-align: center;
+        }
+    }
+    /* gameplay section */
+    .gameplay {
+        padding: 60px 0px;
+
+        .content {
+            row-gap: 20px;
+
+            .image-group {
+                column-gap: 20px;
+            }
+
+            .text-group {
+                padding: 0px 30px;
+                text-align: center;
+    
+                h2 {
+                    font-size: 44px;
+                    font-weight: $bold;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    /* footer section */
+    .footer {
+        padding: 60px 0px;
+
+        .content {
+            row-gap: 10px;
+            justify-content: center;
+            justify-items: center;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 580px) { 
+    /* hero section */
+    .hero {
+        padding: 40px 0px;
+        
+        .content {
+            row-gap: 10px;
+
+            .main-logo {
+                width: 320px;
+            }
+        }
+    }
+    /* gameplay section */
+    .gameplay {
+        padding: 40px 0px;
+
+        .content {
+            row-gap: 10px;
+
+            .image-group {
+                grid-template-columns: 100%;
+                justify-items: center;
+                column-gap: 0px;
+                row-gap: 20px;
+    
+                .img-1 {
+                    content: url("../img/sixdays-gameplay-1-MOBILE.png");
+                }
+                .img-2 {
+                    content: url("../img/sixdays-gameplay-2-MOBILE.png");
+                }
+                .img-3 {
+                    content: url("../img/sixdays-gameplay-3-MOBILE.png");
+                }
+            }
+
+            .text-group {
+                padding: 0px 30px;
+                text-align: center;
+    
+                h2 {
+                    font-size: 30px;
+                    line-height: 38px;
+                    font-weight: $bold;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    /* footer section */
+    .footer {
+        padding: 40px 0px;
+
+        .content {
+            row-gap: 0px;
+
+            .footer-logo {
+                max-width: 300px;
+            }
+
+            h2 {
+                font-size: 42px;
+                line-height: 38px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
